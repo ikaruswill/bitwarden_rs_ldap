@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-COPY ./bitwarden_rs_ldap/target/release/bitwarden_rs_ldap /bitwarden_rs_ldap
+COPY ./vaultwarden_ldap/target/release/vaultwarden_ldap /vaultwarden_ldap
 WORKDIR /
 
-CMD ["/bitwarden_rs_ldap"]
+CMD ["/vaultwarden_ldap"]
